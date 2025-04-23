@@ -13,6 +13,7 @@ function App() {
         <Route path="/upload" element={<UploadPage />} />
         <Route path="/logs" element={<LogTable />} />
         <Route path="/search/:devId" element={<SearchView />} />
+        <Route path="*" element={<Navigate to="/upload" />} />
       </Routes>
     </BrowserRouter>
   );
