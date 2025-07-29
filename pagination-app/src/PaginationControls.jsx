@@ -1,4 +1,4 @@
-import React from "react";
+simport React from "react";
 
 const PaginationControls = ({ currentPage, totalPages, onPageChange }) => {
   const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);

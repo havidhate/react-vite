@@ -1,9 +1,9 @@
 function getUniqueSortedDomains(emails) {
     return Array.from(
       new Set(
-        emails.map(email => email.split('@')[1]) // extract domain
+        emails.map(email => email.split('@')[1]) 
       )
-    ).sort(); // sort the unique domains alphabetically
+    ).sort();
   }
 
   const emails = [

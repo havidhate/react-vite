@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0f172a;
+  --secondary-color: #3b82f6;
+  --accent-color: #facc15;
+  --text-color: #f8fafc;
+  --font: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+section {
+  padding: 2rem 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 2rem 1rem;
+  }
+}
+
+.react-github-calendar {
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 1rem;
+}
+
+/* Navbar Base */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #0f172a; /* dark navy */
+  color: #f8fafc; /* light text */
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  overflow-x: hidden;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #facc15; /* accent color */
+  cursor: pointer;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li {
+  transition: 0.3s;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #f8fafc;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #3b82f6; /* hover color */
+}
+
+/* Hamburger Menu */
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #f8fafc;
+}
+
+/* Responsive Nav (Mobile) */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: #0f172a;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    transform: translateY(-100vh);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-start; /* or flex-start */
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #8715fa;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #3b82f6;
+}
+
+.skills,
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;               /* ← this adds space between badges */
+  justify-content: flex-start; /* or flex-start for left alignment */
+  
+}
+
+.badge {
+  /* background-color: #3b82f6; */
+  color: #3b82f6;
+  /* padding: 0.5rem 1rem; */
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s; */
+}
+
+.badge:hover {
+  background-color: #2563eb;
+}
+
+.project-links {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem; /* 👈 Adjust spacing between links */
+}
